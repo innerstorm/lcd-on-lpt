@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import time ,datetime
+import time, datetime
 import parallel
 
 from modules import *
@@ -26,24 +26,30 @@ def wait(sec):
 if __name__ == '__main__':
 
     lcd = LCD()
+    
     lcd.clearScreen()
+    
     #lcd.setCursorOn()
+    
     lcd.setCursorOff()
+    
     #lcd.setCursorLine()
 
-    lcd.setCursorPos(1,1)
-    lcd.write('Csaba')
-    wait(.5)
+    lcd.setCursorPos(0,0)
+
+    lcd.write('ABCD')
+    
+    #wait(.5)
     
     #lcd.customChar()
     #lcd.customChar2()
 
     #wait(0)
 
-    lcd.clearCharMemory()
+    #lcd.clearCharMemory()
     #lcd.defineCustomCharsWithPos(chars)
 
-    lcd.loadCustomCharSet(GAUGES2)
+    #lcd.loadCustomCharSet(GAUGES2)
     
     #lcd.setCursorPos(16,1)
     #lcd.writeCustomChar(1)
@@ -55,7 +61,7 @@ if __name__ == '__main__':
 
 
 #    while True:
-
+    """
     lcd.setCursorPos(1,1)
     for i in range(0,8):
         lcd.writeCustomChar(i)
@@ -64,11 +70,12 @@ if __name__ == '__main__':
 
     #now = int(round(time.time() * 1000))
 
+
     """
-    start_time = time.time()
+    #start_time = time.time()
+    #i = 1
 
-    i=1
-
+    """
     while True:
         elapsed = time.time() - start_time
 
@@ -91,14 +98,14 @@ if __name__ == '__main__':
             start_time = time.time()
     """
 
+
     """
     while True:
-        lcd.setCursorPos(1,2)
+        lcd.setCursorPos(0,1)
         now = datetime.datetime.today().strftime('%H:%M:%S')
         lcd.write(now)
-        wait(.1)
+        wait(.5)
     """
-
 
     #lcd.clearScreen()
 
